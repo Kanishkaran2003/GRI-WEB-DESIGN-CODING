@@ -1,0 +1,56 @@
+<html>
+<head>
+<script>
+function valid()
+{
+var numbers= /^[0-9]+$/;
+var letters = /^[a-zA-Z]+$/;
+var sname=document.student.sno;
+var snamelen = sname.value.length;
+var mobile=document.student.mno;
+var mobilelen = mobile.value.length;
+
+if (sname.value == "" | snamelen <= 2 | snamelen > 30)
+{
+   alert ("Student name should not be empty and minimum 3 chars and maximum 30 chars.");
+   return false;
+}
+
+if (sname.value.match(letters))
+{
+}
+else
+{
+   alert ("Only letters a-z and A-Z are allowed");
+   return false;
+}
+
+if (mobilelen != 10)
+{
+   alert ("Mobile Number should be 10 digits");
+   return false;
+}
+
+if (mobile.value.match(numbers))
+{
+}
+else
+{
+   alert ("Mobile Number should be digits 0 -9");
+   return false;
+}
+
+}
+</script>
+</head>
+<body>
+
+<form name="student" onSubmit="return valid()">
+Student Name: <input type="text" name="sno" id="sno">
+<br>
+Mobile Number: <input type="text" name="mno" id="mno">
+<br>
+<button type="submit" value="submit">Submit</button>
+</form>
+</body>
+</html>

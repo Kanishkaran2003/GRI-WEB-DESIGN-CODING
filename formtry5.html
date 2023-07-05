@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+function valid()
+{
+var accept = document.sn.acc;
+if (accept.checked == false)
+{
+alert("Please check the check box");
+return false;
+}
+}
+</script>
+</head>
+<body>
+<form name="sn" id="sn" onSubmit="return valid()">
+<input type="checkbox" name="acc" id="acc" value="Accept">Do You Accept our Terms & Conditions
+<br>
+<button type="submit" value="submit">Submit</button>
+<br>
+</form>
+</body>
+</html>
